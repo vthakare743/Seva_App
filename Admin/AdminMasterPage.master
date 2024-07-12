@@ -1,0 +1,298 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="Admin_AdminMasterPage" %>
+
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="gvishexam">
+    <meta name="author" content="gvishexam">
+    <meta name="keywords" content="gvishexam">
+    
+    <!-- Title Page-->
+    
+
+    <!-- Fontfaces CSS-->
+    <link href="../css/font-face.css" rel="stylesheet" />
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="../vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+      <link href="../vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" />
+    <script type="" src="../vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script   type="" src="../vendor/lightbox2/dist/js/lightbox-plus-jquery.min.js"></script>
+    <!-- Bootstrap CSS-->
+    <link href="../vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="../vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="../vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="../vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="../vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+   <link href="css/theme.css" rel="stylesheet" media="all">
+
+        <script type="text/javascript" src="../tinymce/js/tinymce/tinymce.min.js"></script>
+    <script type="text/javascript">
+        tinymce.init({
+            selector: 'textarea', width: 900, plugins: 'link,hr,insertdatetime,image paste',
+            images_file_types: 'jpg,svg,webp'
+
+        });
+    </script>
+
+    
+    <script src='jquery.repeater.min.js'></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
+</head>
+
+<body>
+     <%--  loading Code Start--%>
+     <div id="preloader"></div>
+<%--    loading Code end--%>
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class="header-mobile d-block d-lg-none">
+                <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+            
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled">
+                 
+
+                        <%--  <li>
+                            <a href="Default.aspx">
+                                <asp:Image ID="Image4" runat="server" ImageUrl="~/images/home_icon.png" Width="35px" Height="35px" /> <asp:Label ID="Label4" runat="server" Text="Home" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Large"></asp:Label></a>
+                        </li>
+                
+                       
+                      
+                         <li>
+                          <a href="UserRegistration.aspx">
+                                <asp:Image ID="Image5" runat="server" ImageUrl="~/images/college.png" Width="35px" Height="35px" /> <asp:Label ID="Label5" runat="server" Text="User" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Large"></asp:Label></a>
+                        </li>
+
+                           <li>
+                            <a href="AgentRegistratuon.aspx">
+                                <asp:Image ID="Image6" runat="server" ImageUrl="~/images/student.png" Width="35px" Height="35px" /> <asp:Label ID="Label6" runat="server" Text="Agent" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Large"></asp:Label></a>
+                        </li>
+                        <li>
+                            <a href="Default.aspx">
+                                <asp:Image ID="Image7" runat="server" ImageUrl="~/images/student.png" Width="35px" Height="35px" /> <asp:Label ID="Label7" runat="server" Text="Admin" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Large"></asp:Label></a>
+                        </li>
+                       --%>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- END HEADER MOBILE-->
+
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block">
+            <div class="logo">
+              
+                   <li>
+                        <div class="user-img-div">
+                             <%--<asp:Image ID="Image10" runat="server" class="img-thumbnail" ImageUrl="~/User/Photos/admin (2).png" />
+                            --%>
+                            <div class="user-img-div">
+                         <%--  <img src="../User/Photos/admin-logo.png" class="img-thumbnail" />--%>
+                            <div class="inner-text">
+                     
+                               <asp:Label ID="lblmsg" runat="server" Text="Admin" 
+                         Font-Bold="True" Font-Italic="True" Font-Size="X-Large" ForeColor="#FF6600"></asp:Label>
+                            <br />
+                                
+                            </div>
+                        </div>
+
+                    </li>
+                    
+            </div>
+           <%-- <div class="menu-sidebar__content js-scrollbar1">--%>
+            <div class="account-dropdown__body">
+                         <div class="account-dropdown__item">
+              <%--  <nav class="navbar-sidebar">--%>
+                    <ul class="list-unstyled navbar__list">
+
+                         <li>
+                           
+                           <%--     <asp:Image ID="Image3" runat="server" ImageUrl="~/images/home_icon.png" Width="35px" Height="35px" /> <asp:Label ID="Label3" runat="server" Text="Home"  Font-Bold="True" Font-Names="Calisto MT" Font-Size="Large"></asp:Label></a>--%>
+                                 <a href="Default.aspx"><i class="fa fa-desktop "></i><span>Home</span></a>
+                        </li>
+                
+                       
+                         <%--<li>--%>
+                          
+              <%--                  <asp:Image ID="Image1" runat="server" ImageUrl="~/images/home1.png" Width="35px" Height="35px" /> <asp:Label ID="Label1" runat="server" Text="User" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Large"></asp:Label></a>--%>
+                                <%--<a href="EditProfile.aspx"><i class="fa fa-user"></i><span>Edit Profile</span></a>
+                        </li>--%>
+
+                           <li>                              
+                                 <a href="ViewCoustomer.aspx"><i class="fa fa-users"></i><span>View Coustomer</span></a>
+                        </li>
+                        <li>
+                        
+                         <a href="ApplicationList.aspx"><i class="fa fa-user"></i>View Application List<span class="fa arrow"></span></a>
+                          <ul class="nav nav-second-level">
+
+                              <%-- <li>
+                                <a href="NewApplication.aspx"><i class="fa fa-flash"></i>New Application</a>
+                            </li>
+                              <li>
+                                <a href="PendingApplication.aspx"><i class="fa fa-flash"></i>Pending Application</a>
+                            </li>--%>
+                              <li>
+                                <a href="SearchApplication.aspx"><i class="fa fa-search history"></i>Search Application</a>
+                            </li>
+                         </ul>
+                      </li>
+                    
+                       <%--  <li>
+                                                    
+                    
+                                <a href="Wallet.aspx"><i class="fa fa-folder-open"></i><span>Report/Wallet</span></a>
+                        </li>fa fa-hourglass-start
+                         --%>
+                        <%-- <li>
+                                <a href="AddAgent.aspx"><i class="fa fa-user-secret"></i>Add Agent</a>
+                            </li>--%>
+                        <li>
+                                <a href="SearchAgent.aspx"><i class="fa fa-user-secret"></i>Search Agent</a>
+                            </li>
+
+                         <li>
+                                <a href="ShowAgent.aspx"><i class="fa fa-user-secret"></i>Show Agent</a>
+                            </li>
+
+                        
+                         <li>                                
+                    <%--            <asp:Image ID="Image8" runat="server" ImageUrl="~/images/admin.png" Width="35px" Height="35px" /> <asp:Label ID="Label8" runat="server" Text="Admin" Font-Bold="True" Font-Names="Calisto MT" Font-Size="Large"></asp:Label></a>--%>
+                                 <a href="ChangePassword.aspx"><i class="fa fa-flash "></i><span>Change Password</span></a>
+                        </li>
+                        <li>
+                           
+                            <a href="../Default.aspx"><%--<i><asp:Image ID="Image12" runat="server" ImageUrl="~/images/home_icon.png" Width="35px" Height="35px"/></i>--%><i class="fa fa-bicycle "></i><span>Logout</span></a>
+                        </li>
+                    </ul>
+              <%--  </nav>--%>
+              </div>
+            </div>
+        </aside>
+        <!-- END MENU SIDEBAR-->
+ <!-- PAGE CONTAINER-->
+         <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                           
+                               <h1></h1>
+                           <%--  <asp:Label ID="Label1" runat="server" Text="Government Vidarbha Institute of Science and Humanities, Amravati (Autonomous Institute) " ForeColor="Red" Font-Size="Large" Font-Bold="True"></asp:Label>--%>
+                           
+                            
+                          
+                            <div class="header-button">
+                                <div class="noti-wrap">
+                                   <div class="noti__item js-item-menu">
+                                        <div class="notifi-dropdown js-dropdown">
+                                            <div class="notifi__item">
+                                                <div class="bg-c1 img-cir img-40">
+                                                    <i class="zmdi zmdi-email-open"></i>
+                                                </div>
+                                            </div>
+                                            <div class="notifi__item">
+                                                <div class="bg-c2 img-cir img-40">
+                                                    <i class="zmdi zmdi-account-box"></i>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <%--<div class="account-wrap">
+                                    <div class="account-item clearfix js-item-menu">
+                                        <asp:Label ID="lblname" Text="Technical Support : (Time:11am to 5pm)" ForeColor="Blue" runat="server" Font-Bold="True" Font-Size="14px" ></asp:Label>
+                                      <br /><asp:Image ID="Image7" style="" runat="server" ImageUrl="~/images/call.png" Width="25px" /><asp:Label ID="Label7" Text="7588113800(Technical Support) " ForeColor="Blue" runat="server" Font-Bold="True" Font-Size="16px"></asp:Label>
+                                       <br /><asp:Image ID="Image8" style="" runat="server" ImageUrl="~/images/email.png" Width="25px" /><asp:Label ID="Label8" Text="gvishadmission@gmail.com" ForeColor="Blue" runat="server" Font-Bold="True" Font-Size="16px"></asp:Label>
+                                       <br />
+                                    </div>
+                                </div>--%>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+
+            <!-- MAIN CONTENT-->
+    
+             <div class="main-content">
+             <div class="section__content section__content--p30">
+               <div class="container-fluid">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+             
+            
+                </asp:ContentPlaceHolder>
+                   <div class="row">
+                            <div class="col-md-12">
+                             <%--   <div class="copyright">
+                                    <p>Copyright © 2023 LitsBros Pvt. Ltd. Design & Developed By <a href="https://www.litsbros.com">LitsBros Pvt.Ltd.</a>.</p>
+                                </div>--%>
+                            </div>
+                        </div>
+              </div>
+              </div>
+            <!-- END MAIN CONTENT-->
+            <!-- END PAGE CONTAINER-->
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->
+ 
